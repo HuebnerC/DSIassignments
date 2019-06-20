@@ -1,7 +1,7 @@
 
 ## Bayesian A/B Testing 
 
-A half-day assignment discussing the use of bayesian statistics to do simple A/B testing, using conjugate priors to solve bayesias problems more efficiently. This follows the bayes-intro repo.
+A half-day assignment discussing the use of Bayesian statistics to do simple A/B testing, using conjugate priors to solve Bayesian problems more efficiently. This follows the bayes-intro repo.
 
 ## References
 
