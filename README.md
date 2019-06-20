@@ -1,7 +1,7 @@
 
 ## Bayesian A/B Testing 
 
-While A/B testing with frequentist and Bayesian methods can be incredibly useful for determining the effectiveness of various changes to your products, better algorithms exist for making educated decision on-the-fly. Two such algorithms that typically out-perform A/B tests are extensions of the [Multi-armed bandit problem](http://stevehanov.ca/blog/index.php?id=132) which uses an _epsilon-greedy_ strategy. Using a combination of exploration and exploitation, this strategy updates the model with each successive test, leading to higher overall click-through rate. An improvement on this algorithm uses an _epsilon-first_ strategy called [UCB1](http://www.chrisstucchio.com/blog/2012/bandit_algorithms_vs_ab.html). Both can be used in lieu of traditional A/B testing to optimize products and click-through rates.
+A half-day assignment discussing the use of bayesian statistics to do simple A/B testing, using conjugate priors to solve bayesias problems more efficiently. This follows the bayes-intro repo.
 
 ## References
 
@@ -11,7 +11,6 @@ While A/B testing with frequentist and Bayesian methods can be incredibly useful
 * [Patrick Lam's Website](http://patricklam.org/)
 * [Introduction to MCMC for Machine Learning](http://www.cs.princeton.edu/courses/archive/spr06/cos598C/papers/AndrieuFreitasDoucetJordan2003.pdf)
 * [Conjugate Prior Diagrams](http://www.johndcook.com/conjugate_prior_diagram.html)
-* [A Book About Bandit Algorithms](http://bandits.mynaweb.com/)
 * [A Short Intro to Bayesian Statistics](http://aleph0.clarku.edu/~djoyce/ma218/bayes2.pdf)
 * [Conjugate Priors](http://stats.stackexchange.com/questions/58564/help-me-understand-bayesian-prior-and-posterior-distributions)
 * [Philosophy and the practice of Bayesian statistics](http://www.stat.columbia.edu/~gelman/research/published/philosophy.pdf)
@@ -21,7 +20,3 @@ While A/B testing with frequentist and Bayesian methods can be incredibly useful
 * [A/B Testing at Amazon](https://developer.amazon.com/sdk/ab-testing/reference/ab-math.html)
 * [Bayesian Updating of Probability Distributions](http://www.databozo.com/2013/09/15/Bayesian_updating_of_probability_distributions.html)
 
-### Academia
-
-* [Finite-Time Analysis of the Mulitarmed Bandit problem](http://homes.di.unimi.it/~cesabian/Pubblicazioni/ml-02.pdf)
-* [Multiarmed Bandit Algorithms and Empirical Evaluation](http://www.cs.nyu.edu/~mohri/pub/bandit.pdf)
