@@ -1,6 +1,6 @@
 ### Bayesian A/B Testing
 
-**Include your code and answers in** `individual.py`.
+**Include your code and answers in** `bayesian_testing.py`.
 
 Front-end web developers are interested in which design of their website yields more sales or some other metric of interest. They will route some fraction of visitors to site A, and the other fraction to site B, and record if the visit yielded a sale or not.
 
