@@ -1,5 +1,7 @@
 ### Bayesian A/B Testing
 
+## Introduction
+
 **Include your code and answers in** `bayesian_testing.py`.
 
 Front-end web developers are interested in which design of their website yields more sales or some other metric of interest. They will route some fraction of visitors to site A, and the other fraction to site B, and record if the visit yielded a sale or not.
@@ -7,6 +9,10 @@ Front-end web developers are interested in which design of their website yields 
 Forget everything you know about statistical testing for now. Let's start from scratch and answer our customer's most important question directly: what is the probability that the CTR for site A is larger than CTR for site B given the data from the experiment (i.e. a sequence of 0s and 1s in the case of click-through-rate)?
 
 We'll call **pA** the true CTR for site A and **pB** the true CTR for site B. These are the values we are trying to figure out empirically.
+
+## Basic
+
+### Part 1: Understanding CTR from one site
 
 For this exercise, we assume you've imported the following modules:
 
@@ -68,7 +74,11 @@ import matplotlib.pyplot as plt
 
     You can see that the majority of the time site B is better than site A, but there is a chance that site A is better.
 
-8. We now want to determine, given these distributions, what is the probability that site B is better than site A.
+## Advanced
+
+### Part 2: Comparing two CTRs
+
+1. We now want to determine, given these distributions, what is the probability that site B is better than site A.
 
     We do this with a simulation. Draw 10,000 points from site A's beta distribution and 10,000 points from site B's distribution. Use either `stats.beta().rvs()` or `np.random.beta()` for this.
 
@@ -81,11 +91,11 @@ import matplotlib.pyplot as plt
 
     This is simulating 10,000 times of drawing from our distributions. Count the number of times that what we drew from site B's distribution is larger than what we drew from site A's distribution. Divide by 10,000 to get the percent likelihood that site B is better than site A.
 
-9. An X% [credible interval](https://en.wikipedia.org/wiki/Credible_interval) in a posterior distribution is analogous to a frequentist analysis's confidence intervals. One method of determining a credible interval is the highest density interval (HDI), which is the most dense interval of a posterior distribution containing X% of its mass. Another method is the equal-tailed interval, which is the interval containing X% of the posterior distribution's mass where the probability of being below the interval is as likely as being above it.
+2. An X% [credible interval](https://en.wikipedia.org/wiki/Credible_interval) in a posterior distribution is analogous to a frequentist analysis's confidence intervals. One method of determining a credible interval is the highest density interval (HDI), which is the most dense interval of a posterior distribution containing X% of its mass. Another method is the equal-tailed interval, which is the interval containing X% of the posterior distribution's mass where the probability of being below the interval is as likely as being above it.
 
     Determine the 95% equal-tailed interval for site A's beta distribution using the simulations you just performed. (Hint: `scipy.stats` has a percentile function called `ppf`.)
 
-10. A great thing about Bayesian A/B testing is that we can also answer the question, *What is the probability that site B is 2 percentage points better than site A*?
+3. A great thing about Bayesian A/B testing is that we can also answer the question, *What is the probability that site B is 2 percentage points better than site A*?
 
     Here, instead of needing `B > A`, we need `B > A + 0.02`.
 
@@ -94,9 +104,9 @@ import matplotlib.pyplot as plt
     Note, when you compare `B > A` you can calculate a single probability that this occurs in the simulation, but you can also do something richer, like calculate the
     entire distribution of `B - A`. Plot a histogram of this quantity. Try `B-A-.02`. What distribution do the shape of these histograms suggest? Why? What shape does it take on if you only use one observation of site_b's data? Is this a problem?
 
-11. For a sanity check, see that you get similar results as you did in #8 using the frequentist approach. Which of the questions in #10 could you answer with a frequentist approach?
+4. For a sanity check, see that you get similar results as you did in #8 using the frequentist approach. Which of the questions in #10 could you answer with a frequentist approach?
 
-12. It's important to understand the business impact of your work as a data scientist. Imagine that your company is debating whether to switch to site B from site A. Assume the following:
+5. It's important to understand the business impact of your work as a data scientist. Imagine that your company is debating whether to switch to site B from site A. Assume the following:
     * the average click on site A yields $1.00 in profit
     * the average click on site B yields $1.05 in profit
 
