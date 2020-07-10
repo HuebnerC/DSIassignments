@@ -104,7 +104,7 @@ import matplotlib.pyplot as plt
     Note, when you compare `B > A` you can calculate a single probability that this occurs in the simulation, but you can also do something richer, like calculate the
     entire distribution of `B - A`. Plot a histogram of this quantity. Try `B-A-.02`. What distribution do the shape of these histograms suggest? Why? What shape does it take on if you only use one observation of site_b's data? Is this a problem?
 
-4. For a sanity check, see that you get similar results as you did in #8 using the frequentist approach. Which of the questions in #10 could you answer with a frequentist approach?
+4. For a sanity check, see that you get similar results as you did in #1 using the frequentist approach. Which of the questions in #3 could you answer with a frequentist approach?
 
 5. It's important to understand the business impact of your work as a data scientist. Imagine that your company is debating whether to switch to site B from site A. Assume the following:
     * the average click on site A yields $1.00 in profit
