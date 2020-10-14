@@ -1,0 +1,3 @@
+[submodule "DSIassignments"]
+	path = DSIassignments
+	url = https://github.com/HuebnerC/DSI_assignments.git
